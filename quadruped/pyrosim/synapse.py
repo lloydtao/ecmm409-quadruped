@@ -4,9 +4,9 @@ import pyrosim.pyrosim as pyrosim
 
 import pyrosim.constants as c
 
-class SYNAPSE: 
 
-    def __init__(self,line):
+class SYNAPSE:
+    def __init__(self, line):
 
         self.Determine_Source_Neuron_Name(line)
 
@@ -26,9 +26,9 @@ class SYNAPSE:
 
         return self.weight
 
-# -------------------------- Private methods -------------------------
+    # -------------------------- Private methods -------------------------
 
-    def Determine_Source_Neuron_Name(self,line):
+    def Determine_Source_Neuron_Name(self, line):
 
         if "sourceNeuronName" in line:
 
@@ -36,7 +36,7 @@ class SYNAPSE:
 
             self.sourceNeuronName = splitLine[1]
 
-    def Determine_Target_Neuron_Name(self,line):
+    def Determine_Target_Neuron_Name(self, line):
 
         if "targetNeuronName" in line:
 
@@ -44,10 +44,10 @@ class SYNAPSE:
 
             self.targetNeuronName = splitLine[3]
 
-    def Determine_Weight(self,line):
+    def Determine_Weight(self, line):
 
         if "weight" in line:
 
             splitLine = line.split('"')
 
-            self.weight = float( splitLine[5] )
+            self.weight = float(splitLine[5])
