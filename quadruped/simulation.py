@@ -12,7 +12,12 @@ import time
 
 class Simulation:
     def __init__(self, realtime=False):
-        """Initialise physics server and load models."""
+        """Initialise physics server and load models.
+        Real time is good for humans to watch the walker, but not good for evolution performance.
+
+        Args:
+            realtime (bool, optional): Run the simulation in real-time. Defaults to False.
+        """
         physicsClient = p.connect(p.GUI)
         p.setGravity(0, 0, -9.8 * 3)
         self.realtime = realtime

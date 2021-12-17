@@ -3,6 +3,11 @@ from pyrosim import pyrosim
 
 class Generation:
     def create_robot(legs=([0.5, 0.5, 1], [0.5, 0.5, 1])):
+        """Generate a robot model, stored in `models/`.
+
+        Args:
+            legs (tuple, optional): Parameters of the model's legs. Defaults to ([0.5, 0.5, 1], [0.5, 0.5, 1]).
+        """
         pyrosim.Start_URDF("models/body.urdf")
 
         torso_size = [1, 1, 1]
