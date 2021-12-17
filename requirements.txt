@@ -1,0 +1,10 @@
+# Packages
+wheel==0.37.0
+
+# Physics
+numpy==1.21.4
+
+# Code quality
+black==21.11b1
+
+# Install pybullet==3.2.1 from `https://github.com/bulletphysics/bullet3`
